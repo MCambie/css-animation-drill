@@ -1,0 +1,71 @@
+body {
+  background: url(./img/css_animation_exercise_4.png) 50% 0 no-repeat;
+}
+
+@keyframes first-anim {
+  0% {
+    transform: translateX(0px);
+  }
+  25% {
+    transform: translateX(480px);
+  }
+  50% {
+    transform: translateX(480px) translateY(180px);
+  }
+  52.5%, 62.5% {
+    transform: translate(250px, 180px) rotate(45deg);
+    border-color: red;
+  }
+  75% {
+    transform: translate(0px, 182px) rotate(90deg);
+    background: none;
+    height: 73px;
+    width: 73px;
+    border-color: blue;
+    border-radius: 0;
+  }
+  100% {
+    transform: translate(421px, 421px);
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background: radial-gradient(#FBDA61, #F76B1C)
+  }
+  /* to {
+    transform: translate(100px, 80px) rotate(30deg);
+    border-radius: 30px;
+    background-color: red;  */
+}
+
+/* @-webkit-keyframes first-anim {
+  /* Safari, Opera, Chrome */
+
+/* 0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(480px);
+  }
+}  */
+
+#stage {
+  background: url(./img/css_animation_exercise_stage.png) no-repeat;
+  opacity: 0.50;
+  height: 600px;
+  width: 600px;
+  position: absolute;
+  top: 0;
+  left: 22%;
+  border: red solid 1px;
+}
+
+#hero {
+  height: 73px !important;
+  width: 73px !important;
+  border: red dashed 1px;
+  position: relative;
+  top: 20px;
+  left: 20px;
+  animation: first-anim 10s infinite alternate;
+  /* -webkit-animation: first-anim 5s infinite forwards; */
+}
